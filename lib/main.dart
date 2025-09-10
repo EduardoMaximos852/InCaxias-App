@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:incaxiasapp/router/app_router.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(InCaxiasApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class InCaxiasApp extends StatelessWidget {
+  const InCaxiasApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'InCaxias',
+      routerConfig: router,
+      theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
 }
